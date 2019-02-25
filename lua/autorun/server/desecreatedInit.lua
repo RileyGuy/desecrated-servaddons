@@ -21,21 +21,17 @@ end
 --IncludeShared( "desecreated/shared/buildmode.lua" )
 --IncludeShared( "desecreated/shared/starfallownertraces.lua" )
 
--- New fancy way
-local rootDir = "addons/servaddons/lua/desecreated/"
-
 -- Runs a function on each file in a directory
 -- Directory is relative to garrysmod/
 -- The function accepts a single argument, the file path
 function callbackOnDirectoryFiles( dir, callback )
-	local dirList, fileList = file.Find( dir, "MOD" )
+	local fileList, dirList = file.Find( dir .. "*" , "LUA" )
 	for k, v in pairs( fileList ) do
 		-- file.Find returns local paths, so we must add the directory
-		-- file.Find also doesn't care how many forward slashes you use, so I add one just in case
-		callback( dir.."/"..v )
+		callback( dir .. v )
 	end
 end
 
-callbackOnDirectoryFiles( rootDir.."server/", IncludeServer )
-callbackOnDirectoryFiles( rootDir.."client/", IncludeClient )
-callbackOnDirectoryFiles( rootDir.."shared/", IncludeShared )
+callbackOnDirectoryFiles( "desecreated/server/", IncludeServer )
+callbackOnDirectoryFiles( "desecreated/client/", IncludeClient )
+callbackOnDirectoryFiles( "desecreated/shared/", IncludeShared )
