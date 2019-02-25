@@ -1,7 +1,9 @@
 --  no arguments just passes the file itself
---AddCSLuaFile()
+AddCSLuaFile()
 
 if SERVER then 
+	
+	include( "desecreated/server/epicchatcommands.lua" )
 	
 	function ToggleBuild( ply )
 		
