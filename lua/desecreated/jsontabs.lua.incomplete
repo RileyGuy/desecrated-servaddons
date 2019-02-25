@@ -1,0 +1,9 @@
+local function loadJSONTable( fileName )
+	""
+end
+
+function JSONTable( fileName )
+
+	local newTab = {}
+
+end
