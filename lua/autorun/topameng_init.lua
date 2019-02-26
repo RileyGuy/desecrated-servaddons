@@ -18,8 +18,10 @@ math.deg2Rad = math.pi / 180
 math.rad2Deg = 180 / math.pi
 math.epsilon = 1.401298e-45
 
-include("topameng_quaternions.lua")
+
 include("topameng_vector3.lua")
+include("topameng_quaternions.lua")
+
 
 
 local AngMeta = FindMetaTable("Angle")
