@@ -1,6 +1,7 @@
 --[[
 
 	chatCmd will be a global library like math or http or ents
+	although it is a global library, it is suggested to use the module-style method of including this module in every script that uses it
 
 	made by the hivemind
 
@@ -80,3 +81,7 @@ if not chatCmd then
 	hook.Add( "PlayerSay", "CaptureChatCommands", chatCmd.Parse )
 
 end
+
+
+-- Return this module
+return chatCmd

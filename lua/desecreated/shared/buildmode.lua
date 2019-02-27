@@ -3,7 +3,8 @@ AddCSLuaFile()
 
 if SERVER then 
 	
-	include( "desecreated/server/epicchatcommands.lua" )
+	-- Include the chat commands
+	local chatCmd = include( "desecreated/server/epicchatcommands.lua" )
 	
 	function ToggleBuild( ply )
 		
@@ -14,6 +15,7 @@ if SERVER then
 		
 	end
 	
+	-- Prevent build mode players from taking or giving damage
 	hook.Add("EntityTakeDamage","Test",function(target,dmginfo)
 			
 		attacker = dmginfo:GetAttacker()
@@ -30,6 +32,8 @@ if SERVER then
 
 end
 
+-- Only allow players in build mode to noclip
+-- Always allow admins to noclip
 -- Shared for clientside prediction
 hook.Add("PlayerNoClip","BuildRestrict",function(ply,ncstate)
 		
