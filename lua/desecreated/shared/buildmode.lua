@@ -4,7 +4,7 @@ AddCSLuaFile()
 if SERVER then 
 	
 	-- Include the chat commands
-	local chatCmd = include( "desecreated/server/epicchatcommands.lua" )
+	local chatCmd = include("desecreated/modules/chatcommands.lua")
 	
 	function ToggleBuild( ply )
 		

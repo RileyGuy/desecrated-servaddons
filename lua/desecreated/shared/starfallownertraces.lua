@@ -12,7 +12,7 @@ if SERVER then
 	local t = starfallTracerCommandStates
 	
 	-- Make sure chat commands are loaded
-	local chatCmd = include( "desecreated/server/epicchatcommands.lua" )
+	local chatCmd = include("desecreated/modules/chatcommands.lua")
 	
 	chatCmd.AddCommand( "sffinder", function( sender, args, isHidden )
 		

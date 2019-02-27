@@ -1,7 +1,7 @@
 -- Import the chatCmd module
 -- This will overwrite the global chatCmd variable as a local reference
 -- This will also make sure that chatCmd is loaded no matter what
-local chatCmd = include("desecreated/server/epicchatcommands.lua")
+local chatCmd = include("desecreated/modules/chatcommands.lua")
 
 -- Gets a player's team color
 local function PlayerTeamColor( ply )
