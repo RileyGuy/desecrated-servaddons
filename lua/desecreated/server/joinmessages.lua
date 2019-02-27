@@ -12,9 +12,9 @@ hook.Add( "PlayerConnect", "msgPlayerConnected", function( Name, IP )
             local GeoIPData = util.JSONToTable( Result )
             local PlayerLocale = GeoIPData["country"] or "a secret laboratory"
             
-            if GeoIPData["city"] ~= nil and string.len( GeoIPData["city"] ) > 0 then
+            if GeoIPData["regionName"] ~= nil and string.len( GeoIPData["regionName"] ) > 0 then
                 
-                PlayerLocale = GeoIPData["city"] .. ", " .. PlayerLocale
+                PlayerLocale = GeoIPData["regionName"] .. ", " .. PlayerLocale
                 
             end
             
