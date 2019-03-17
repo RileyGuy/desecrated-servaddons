@@ -14,7 +14,7 @@ if SERVER then
 		
 	end
 	
-	hook.Add("EntityTakeDamage","Test",function(target,dmginfo)
+	hook.Add("EntityTakeDamage","Desecreated_BuildMode",function(target,dmginfo)
 			
 		attacker = dmginfo:GetAttacker()
 		attOwner = attacker:CPPIGetOwner()
@@ -31,7 +31,7 @@ if SERVER then
 end
 
 -- Shared for clientside prediction
-hook.Add("PlayerNoClip","BuildRestrict",function(ply,ncstate)
+hook.Add("PlayerNoClip","Desecreated_BuildRestrict",function(ply,ncstate)
 		
 	return ply:GetNWBool("IsInBuild") or ply:IsAdmin()
 	

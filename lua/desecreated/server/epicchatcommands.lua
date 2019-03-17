@@ -78,7 +78,7 @@ if not chatCmd then
 	end
 
 	-- Add the Parse function to the PlayerSay hook
-	hook.Add( "PlayerSay", "CaptureChatCommands", chatCmd.Parse )
+	hook.Add( "PlayerSay", "Desecreated_CaptureChatCommands", chatCmd.Parse )
 
 end
 

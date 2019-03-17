@@ -1,4 +1,4 @@
-hook.Add( "PlayerConnect", "msgPlayerConnected", function( Name, IP )
+hook.Add( "PlayerConnect", "Desecreated_MsgPlayerConnected", function( Name, IP )
     
     IpData = string.Explode( ":", IP)
     
@@ -50,14 +50,14 @@ hook.Add( "PlayerConnect", "msgPlayerConnected", function( Name, IP )
 end)
 
 -- TODO: Player spawned
-hook.Add( "PlayerInitialSpawn", "msgPlayerInitialSpawn", function( _Player )
+hook.Add( "PlayerInitialSpawn", "Desecreated_MsgPlayerInitialSpawn", function( _Player )
     
     chat.AddText( Color( 0, 180, 250 ), _Player:GetName(), Color( 250, 180, 0 ), " " .. _Player:SteamID(), Color( 250, 250, 250 ), " has spawned " )
     
 end )
 
 -- TODO: Player disconnected
-hook.Add( "PlayerDisconnected", "msgPlayerDisconnected", function( _Player )
+hook.Add( "PlayerDisconnected", "Desecreated_MsgPlayerDisconnected", function( _Player )
 
     chat.AddText( Color( 0, 180, 250 ), _Player:GetName(), Color( 250, 250, 250 ), " has disconnected" )
 
