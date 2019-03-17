@@ -36,7 +36,7 @@ if SERVER then
 	
 else
 	
-	local hookName = "DrawStarfallOwnerLines"
+	local hookName = "Desecreated_DrawStarfallOwnerLines"
 	
 	-- Handle updates on the state of the command's activation
 	net.Receive( networkStringName, function()
